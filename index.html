@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javier Gálvez — Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <style>
+      :root {
+        --bg: #090b10;
+        --surface: #141820;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --accent: #00e5ff;
+        --border: #1e2535;
+        --green: #10b981;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Syne", sans-serif;
+        line-height: 1.6;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      section#contact .card a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      nav {
+        position: fixed;
+        inset: 0 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 1rem 2rem;
+        background: rgba(9, 11, 16, 0.9);
+        border-bottom: 1px solid var(--border);
+        z-index: 10;
+      }
+      nav div,
+      nav a {
+        font-family: "JetBrains Mono", monospace;
+        color: var(--muted);
+      }
+      nav > div:last-child {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      nav a:hover {
+        color: var(--accent);
+      }
+      section {
+        padding: 6rem 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding-top: 5rem;
+      }
+      h1 {
+        font-size: clamp(3rem, 6vw, 5rem);
+        margin: 0.5rem 0;
+      }
+      h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 0 0 1rem;
+      }
+      p {
+        max-width: 38rem;
+        color: var(--muted);
+      }
+      .cards {
+        display: grid;
+        gap: 1rem;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 1.5rem;
+        border-radius: 16px;
+      }
+      .badge {
+        display: inline-flex;
+        padding: 0.4rem 0.8rem;
+        background: rgba(0, 229, 255, 0.08);
+        color: var(--accent);
+        border-radius: 999px;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+      .tag {
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        border: 1px solid rgba(0, 229, 255, 0.2);
+        font-size: 0.8rem;
+      }
+      .tag.purple {
+        border-color: #7c3aed;
+        color: #a78bfa;
+      }
+      .tag.green {
+        border-color: var(--green);
+        color: var(--green);
+      }
+      a.btn {
+        display: inline-block;
+        padding: 0.85rem 1.5rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--text);
+        font-weight: 600;
+      }
+      a.btn-primary {
+        background: var(--accent);
+        border-color: transparent;
+        color: #090b10;
+      }
+      footer {
+        padding: 2rem 2rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+      @media (max-width: 700px) {
+        nav {
+          flex-wrap: wrap;
+          padding: 1rem;
+        }
+        section {
+          padding: 4rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>jgalvez.dev</div>
+      <div>
+        <a href="#skills">skills</a><a href="#experience">experiencia</a>
+        <a href="#projects">proyectos</a><a href="#education">formación</a>
+        <a href="#contact">contacto</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <div class="badge">Disponible para nuevas oportunidades</div>
+      <h1>Javier Gálvez</h1>
+      <p style="font-weight: 600; color: #94a3b8">
+        Técnico Superior DAM · Especialización en Web & IA
+      </p>
+      <p>
+        Apasionado del desarrollo web y las soluciones digitales inteligentes.
+        Combino fundamentos técnicos con una alta capacidad de aprendizaje para
+        crear aplicaciones que resuelven problemas reales.
+      </p>
+      <p style="margin-top: 1.5rem">
+        <a href="#contact" class="btn btn-primary">Contactar</a>
+        <a href="#projects" class="btn" style="margin-left: 0.75rem">Ver proyectos</a>
+        <a href="CV_Tecnico.pdf" download class="btn">Descargar CV</a>
+      </p>
+    </section>
+    <section id="skills">
+      <div class="badge">01 — Habilidades técnicas</div>
+      <h2>Stack tecnológico</h2>
+      <div class="cards">
+        <div class="card">
+          <strong>Frontend</strong>
+          <p>HTML, CSS, JavaScript, WordPress</p>
+        </div>
+        <div class="card">
+          <strong>Backend</strong>
+          <p>PHP, Java, Python, SpringBoot</p>
+        </div>
+        <div class="card">
+          <strong>Bases de Datos</strong>
+          <p>MySQL, MongoDB</p>
+        </div>
+        <div class="card">
+          <strong>IA & Automatización</strong>
+          <p>IA Aplicada, Automatización, Big Data</p>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <div class="badge">02 — Trayectoria</div>
+      <h2>Experiencia profesional</h2>
+      <div class="cards">
+        <div class="card">
+          <strong>Ocio y Aventura</strong>
+          <p>03/2025 — 06/2025 · Desarrollador / Soporte IT (Prácticas)</p>
+          <p>
+            Desarrollo de un videojuego aplicado con programación y lógica de
+            sistemas. Resolución de incidencias técnicas y soporte a usuarios.
+          </p>
+        </div>
+        <div class="card">
+          <strong>Wifinity</strong>
+          <p>03/2023 — 06/2023 · Técnico de Soporte (Prácticas)</p>
+          <p>
+            Configuración de decodificadores y aplicaciones de TV. Atención
+            técnica directa al cliente y resolución de incidencias.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="badge">03 — Proyectos</div>
+      <h2>Lo que he construido</h2>
+      <div class="cards">
+        <div class="card">
+          <strong>Videojuego — Ocio y Aventura</strong>
+          <p>
+            Juego interactivo desarrollado con PHP, JavaScript y CSS. MySQL
+            almacena preguntas y respuestas.
+          </p>
+          <div class="tags">
+            <span class="tag purple">PHP</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS</span>
+            <span class="tag green">MySQL</span>
+          </div>
+        </div>
+        <div class="card">
+          <strong>Portal de Eventos — Castilla-La Mancha</strong>
+          <p>
+            Portal sencillo para eventos culturales y de ocio, con diseño
+            responsive y experiencia clara.
+          </p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag purple">PHP</span>
+            <span class="tag green">MySQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="education">
+      <div class="badge">04 — Formación</div>
+      <h2>Educación & Certificaciones</h2>
+      <div class="cards">
+        <div class="card">
+          <strong>DAW</strong>
+          <p>
+            Ciclo Superior — Desarrollo de Aplicaciones Web · IES Maestre
+            Calatrava · EN CURSO
+          </p>
+        </div>
+        <div class="card">
+          <strong>IA Aplicada</strong>
+          <p>Programa Superior · FEDETO / Nebrija · 27 créditos · EN CURSO</p>
+        </div>
+        <div class="card">
+          <strong>DAM</strong>
+          <p>
+            Ciclo Superior — Desarrollo de Aplicaciones Multiplataforma · CES
+            Juan Pablo II · 2023-2025
+          </p>
+        </div>
+        <div class="card">
+          <strong>SMR</strong>
+          <p>
+            Ciclo Medio — Sistemas Microinformáticos y Redes · IES Valdehierro ·
+            2021-2023
+          </p>
+        </div>
+        <div class="card">
+          <strong>Ciberseguridad</strong>
+          <p>50 horas · CES Juan Pablo II · 2024</p>
+        </div>
+        <div class="card">
+          <strong>Big Data</strong>
+          <p>30 horas · CES Juan Pablo II · 2025</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="badge">05 — Contacto</div>
+      <h2>¿Hablamos?</h2>
+      <p>
+        Estoy buscando mi próxima oportunidad en desarrollo o tecnología. Si
+        tienes un proyecto interesante o una vacante, me encantaría escucharte.
+      </p>
+      <div class="cards" style="margin-top: 1.5rem">
+        <div class="card">
+          <a href="mailto:javiergalvez2002@gmail.com">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+            </svg>
+            javiergalvez2002@gmail.com
+          </a>
+        </div>
+        <div class="card">
+          <a href="tel:+34646269173">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+            </svg>
+            +34 646 269 173
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.linkedin.com/in/javier-g%C3%A1lvez-9865a8318/" target="_blank">LinkedIn</a>
+        </div>
+        <div class="card">
+          <a href="CV_Tecnico.pdf" download class="btn btn-primary">⬇ Descargar CV</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      Código claro, resultados medibles y proyectos listos para crecer.
+    </footer>
+  </body>
+</html>
